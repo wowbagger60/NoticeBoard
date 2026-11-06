@@ -1,0 +1,16 @@
+{
+  "id": "{49A50F0B-6E79-4951-812A-BC400C116EC1}",
+  "name": "NoticeBoard",
+  "type": 3,
+  "vendor": "Cassanis Automation",
+  "url": "https://github.com/wowbagger60/NoticeBoard/blob/main/NoticeBoard/README.md",
+  "aliases": [
+    "Notice Board",
+    "Meldungstafel",
+    "Tableau des notifications"
+  ],
+  "parentRequirements": [],
+  "childRequirements": [],
+  "implemented": [],
+  "prefix": "NBOARD"
+}

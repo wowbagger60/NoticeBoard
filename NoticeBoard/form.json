@@ -1,0 +1,462 @@
+{
+    "elements": [
+        {
+            "type": "List",
+            "name": "Levels",
+            "caption": "Levels",
+            "rowCount": 5,
+            "add": true,
+            "delete": true,
+            "sort": {
+                "column": "Priority",
+                "direction": "ascending"
+            },
+            "columns": [
+                {
+                    "caption": "ID",
+                    "name": "ID",
+                    "width": "auto",
+                    "add": "",
+                    "edit": {
+                        "type": "ValidationTextBox"
+                    }
+                },
+                {
+                    "caption": "Priority",
+                    "name": "Priority",
+                    "width": "120px",
+                    "add": 1,
+                    "edit": {
+                        "type": "NumberSpinner",
+                        "minimum": 1
+                    }
+                },
+                {
+                    "caption": "Color",
+                    "name": "Color",
+                    "width": "140px",
+                    "add": 8421504,
+                    "edit": {
+                        "type": "SelectColor",
+                        "allowTransparent": false
+                    }
+                },
+                {
+                    "caption": "Notify",
+                    "name": "Notify",
+                    "width": "130px",
+                    "add": true,
+                    "edit": {
+                        "type": "CheckBox"
+                    }
+                }
+            ]
+        },
+        {
+            "type": "Label",
+            "caption": "Placeholders: {name}, {parent}, {value}, {age} (update rules), {status} and {statustext} (instance rules). Conditions use the placeholder variable, otherwise their first variable. Without a target, a click does nothing."
+        },
+        {
+            "type": "ExpansionPanel",
+            "caption": "Condition rules",
+            "items": [
+                {
+                    "type": "List",
+                    "name": "ConditionRules",
+                    "caption": "Show a status or create a message when a condition is met",
+                    "rowCount": 6,
+                    "add": true,
+                    "delete": true,
+                    "columns": [
+                        {
+                            "caption": "Active",
+                            "name": "Active",
+                            "width": "70px",
+                            "add": true,
+                            "edit": {
+                                "type": "CheckBox"
+                            }
+                        },
+                        {
+                            "caption": "Text",
+                            "name": "Text",
+                            "width": "auto",
+                            "add": "",
+                            "edit": {
+                                "type": "ValidationTextBox"
+                            }
+                        },
+                        {
+                            "caption": "Level",
+                            "name": "Level",
+                            "width": "140px",
+                            "add": "",
+                            "edit": {
+                                "type": "Select",
+                                "options": []
+                            }
+                        },
+                        {
+                            "caption": "Mode",
+                            "name": "Mode",
+                            "width": "120px",
+                            "add": 0,
+                            "edit": {
+                                "type": "Select",
+                                "options": [
+                                    {
+                                        "caption": "Status",
+                                        "value": 0
+                                    },
+                                    {
+                                        "caption": "Message",
+                                        "value": 1
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "caption": "Delay",
+                            "name": "Delay",
+                            "width": "110px",
+                            "add": 0,
+                            "edit": {
+                                "type": "NumberSpinner",
+                                "minimum": 0,
+                                "suffix": " s"
+                            }
+                        },
+                        {
+                            "caption": "Target",
+                            "name": "TargetID",
+                            "width": "200px",
+                            "add": 1,
+                            "edit": {
+                                "type": "SelectObject"
+                            }
+                        },
+                        {
+                            "caption": "Placeholder variable",
+                            "name": "PlaceholderVariableID",
+                            "width": "200px",
+                            "add": 1,
+                            "edit": {
+                                "type": "SelectVariable"
+                            }
+                        },
+                        {
+                            "caption": "Condition",
+                            "name": "Condition",
+                            "width": "0px",
+                            "visible": false,
+                            "add": "",
+                            "edit": {
+                                "type": "SelectCondition",
+                                "multi": true
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "ExpansionPanel",
+            "caption": "Update monitoring",
+            "items": [
+                {
+                    "type": "List",
+                    "name": "StaleRules",
+                    "caption": "Show a status when a variable has not been updated for too long",
+                    "rowCount": 6,
+                    "add": true,
+                    "delete": true,
+                    "columns": [
+                        {
+                            "caption": "Active",
+                            "name": "Active",
+                            "width": "70px",
+                            "add": true,
+                            "edit": {
+                                "type": "CheckBox"
+                            }
+                        },
+                        {
+                            "caption": "Variable",
+                            "name": "VariableID",
+                            "width": "240px",
+                            "add": 1,
+                            "edit": {
+                                "type": "SelectVariable"
+                            }
+                        },
+                        {
+                            "caption": "Maximum age",
+                            "name": "MaxAge",
+                            "width": "130px",
+                            "add": 60,
+                            "edit": {
+                                "type": "NumberSpinner",
+                                "minimum": 1,
+                                "suffix": " min"
+                            }
+                        },
+                        {
+                            "caption": "Level",
+                            "name": "Level",
+                            "width": "140px",
+                            "add": "",
+                            "edit": {
+                                "type": "Select",
+                                "options": []
+                            }
+                        },
+                        {
+                            "caption": "Text",
+                            "name": "Text",
+                            "width": "auto",
+                            "add": "",
+                            "edit": {
+                                "type": "ValidationTextBox"
+                            }
+                        },
+                        {
+                            "caption": "Target",
+                            "name": "TargetID",
+                            "width": "200px",
+                            "add": 1,
+                            "edit": {
+                                "type": "SelectObject"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "ExpansionPanel",
+            "caption": "Instance monitoring",
+            "items": [
+                {
+                    "type": "List",
+                    "name": "InstanceRules",
+                    "caption": "Show a status while an instance reports an error",
+                    "rowCount": 6,
+                    "add": true,
+                    "delete": true,
+                    "columns": [
+                        {
+                            "caption": "Active",
+                            "name": "Active",
+                            "width": "70px",
+                            "add": true,
+                            "edit": {
+                                "type": "CheckBox"
+                            }
+                        },
+                        {
+                            "caption": "Instance",
+                            "name": "InstanceID",
+                            "width": "240px",
+                            "add": 1,
+                            "edit": {
+                                "type": "SelectInstance"
+                            }
+                        },
+                        {
+                            "caption": "Level",
+                            "name": "Level",
+                            "width": "140px",
+                            "add": "",
+                            "edit": {
+                                "type": "Select",
+                                "options": []
+                            }
+                        },
+                        {
+                            "caption": "Text",
+                            "name": "Text",
+                            "width": "auto",
+                            "add": "",
+                            "edit": {
+                                "type": "ValidationTextBox"
+                            }
+                        },
+                        {
+                            "caption": "Delay",
+                            "name": "Delay",
+                            "width": "110px",
+                            "add": 0,
+                            "edit": {
+                                "type": "NumberSpinner",
+                                "minimum": 0,
+                                "suffix": " s"
+                            }
+                        },
+                        {
+                            "caption": "Target",
+                            "name": "TargetID",
+                            "width": "200px",
+                            "add": 1,
+                            "edit": {
+                                "type": "SelectObject"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "ExpansionPanel",
+            "caption": "Notification",
+            "items": [
+                {
+                    "type": "SelectScript",
+                    "name": "NotificationScript",
+                    "caption": "Notification script"
+                },
+                {
+                    "type": "Label",
+                    "caption": "The script runs asynchronously for every new status, logged status change, cleared status and new message of a level with Notify enabled. It receives the data in $_IPS (NBOARD_EVENT, NBOARD_LEVEL, NBOARD_MESSAGE, ...)."
+                }
+            ]
+        },
+        {
+            "type": "ExpansionPanel",
+            "caption": "Sorting",
+            "items": [
+                {
+                    "type": "Select",
+                    "name": "Grouping",
+                    "caption": "Grouping",
+                    "options": [
+                        {
+                            "caption": "Statuses before messages",
+                            "value": 0
+                        },
+                        {
+                            "caption": "Messages before statuses",
+                            "value": 1
+                        },
+                        {
+                            "caption": "Mixed",
+                            "value": 2
+                        }
+                    ]
+                },
+                {
+                    "type": "Select",
+                    "name": "StatusSorting",
+                    "caption": "Status sorting",
+                    "options": [
+                        {
+                            "caption": "Priority",
+                            "value": 0
+                        },
+                        {
+                            "caption": "Newest first",
+                            "value": 1
+                        },
+                        {
+                            "caption": "Oldest first",
+                            "value": 2
+                        }
+                    ]
+                },
+                {
+                    "type": "Select",
+                    "name": "MessageSorting",
+                    "caption": "Message sorting",
+                    "options": [
+                        {
+                            "caption": "Newest first",
+                            "value": 0
+                        },
+                        {
+                            "caption": "Oldest first",
+                            "value": 1
+                        },
+                        {
+                            "caption": "Priority",
+                            "value": 2
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "ExpansionPanel",
+            "caption": "Display",
+            "items": [
+                {
+                    "type": "CheckBox",
+                    "name": "ShowTimestamp",
+                    "caption": "Show date and time"
+                },
+                {
+                    "type": "ValidationTextBox",
+                    "name": "DateFormat",
+                    "caption": "PHP date format"
+                },
+                {
+                    "type": "ValidationTextBox",
+                    "name": "EmptyText",
+                    "caption": "Text when no items are active"
+                },
+                {
+                    "type": "CheckBox",
+                    "name": "SummaryVariables",
+                    "caption": "Create summary variables (count and highest level)"
+                }
+            ]
+        },
+        {
+            "type": "ExpansionPanel",
+            "caption": "Retention",
+            "items": [
+                {
+                    "type": "NumberSpinner",
+                    "name": "MessageRetentionDays",
+                    "caption": "Default message retention",
+                    "suffix": " days",
+                    "minimum": 0
+                },
+                {
+                    "type": "NumberSpinner",
+                    "name": "HistoryRetentionDays",
+                    "caption": "History retention",
+                    "suffix": " days",
+                    "minimum": 0
+                },
+                {
+                    "type": "NumberSpinner",
+                    "name": "MaximumHistoryEntries",
+                    "caption": "Maximum history entries",
+                    "minimum": 0
+                }
+            ]
+        }
+    ],
+    "actions": [
+        {
+            "type": "Label",
+            "caption": "The CurrentItems and History variables are read-only JSON outputs."
+        }
+    ],
+    "status": [
+        {
+            "code": 102,
+            "icon": "active",
+            "caption": "Active"
+        },
+        {
+            "code": 201,
+            "icon": "error",
+            "caption": "Invalid level configuration"
+        },
+        {
+            "code": 202,
+            "icon": "error",
+            "caption": "Invalid rule configuration, see message log"
+        }
+    ]
+}
