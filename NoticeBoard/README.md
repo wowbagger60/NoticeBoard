@@ -302,19 +302,4 @@ accepted: PayPal to ueli.schweizer@cassanis.fr
 
 ## 11. Changelog
 
-**2.0 Build 1:** Further development of Notification Center 1.0 (prefix
-`NOTIF`) under a new name, with a new library and module GUID. Notice Board is
-therefore not an update but a separate module: existing Notification Center
-instances remain unchanged; data is not migrated, and scripts must be changed
-from `NOTIF_` to `NBOARD_`.
-
-- Rules without scripts: condition rules, update monitoring and instance
-  monitoring.
-- Placeholders `{name}`, `{parent}`, `{value}`, `{age}`, `{status}` and
-  `{statustext}`; condition rules with a selectable placeholder variable.
-- New functions `DeleteMessagesByIdentifier`, `GetCount` and `GetHighestLevel`.
-- Optional summary variables.
-- Optional notification script, called asynchronously per event; filter via «Notify» per level.
-- An empty target is object ID 1, the Symcon default for «None»; no target means
-  no navigation.
-- Data and tile are only written or updated when something changes.
+**2.0 Build 1:** First public beta version.

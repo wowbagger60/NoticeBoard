@@ -310,19 +310,4 @@ gerne angenommen: PayPal an ueli.schweizer@cassanis.fr
 
 ## 11. Änderungen
 
-**2.0 Build 1:** Weiterentwicklung von Notification Center 1.0 (Präfix `NOTIF`)
-unter neuem Namen, mit neuer Library- und Modul-GUID. Notice Board ist deshalb
-kein Update, sondern ein eigenes Modul: Bestehende Notification-Center-Instanzen
-bleiben unverändert; Daten werden nicht übernommen, Scripts müssen von
-`NOTIF_` auf `NBOARD_` umgestellt werden.
-
-- Regeln ohne Script: Bedingungen, Aktualisierungsüberwachung und
-  Instanzüberwachung.
-- Platzhalter `{name}`, `{parent}`, `{value}`, `{age}`, `{status}` und
-  `{statustext}`; bei Bedingungen mit wählbarer Platzhalter-Variable.
-- Neue Funktionen `DeleteMessagesByIdentifier`, `GetCount` und `GetHighestLevel`.
-- Optionale Zusammenfassungsvariablen.
-- Optionales Benachrichtigungs-Script, asynchron je Ereignis; Filter über «Benachrichtigen» je Stufe.
-- Ein leeres Ziel ist Objekt-ID 1, der Symcon-Standard für «Kein(e)»; ohne Ziel
-  kein Sprung.
-- Daten und Kachel werden nur bei Änderungen geschrieben bzw. aktualisiert.
+**2.0 Build 1:** Erste öffentliche Beta-Version.
